@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Falcone | فالکون</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">ارسال رایگان سفارش‌های بالای ۲ میلیون تومان</div>
+    <header>
+        <div class="wrap nav">
+            <a class="brand"><span>F</span> FALCONE</a>
+            <nav>
+                <a class="active" href="#">خانه</a>
+                <a href="./product.html">محصولات</a>
+                <a href="./service.html">خدمات</a>
+                <a href="./contact.html">تماس با ما</a>
+                <a href="./about.html">درباره فالکون</a>
+            </nav>
+            <div class="actions">
+                <button onclick="search()">⌕</button>
+                <button onclick="cartOpen()">🛒<i id="count">0</i></button>
+                <button class="hamb" onclick="menu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrap heroGrid">
+            <div>
+                <small>FALCONE AUTO COMPANY</small>
+                <h1>برای ماشینت،<br><b>بهتر انتخاب کن.</b></h1>
+                <p>فروشگاه تخصصی محصولات خودرو؛ از دیتیلینگ و مراقبت تا اکسسوری‌های کاربردی و حرفه‌ای.</p>
+                <div class="buttons">
+                    <a class="btn blue" href="./product.html">مشاهده محصولات ←</a>
+                    <a class="btn dark" href="#cats">خدمات</a>
+                </div>
+                <div class="numbers">
+                    <div>
+                        <b>۲۵۰۰+</b><span>محصول</span>
+                    </div>
+                    <div>
+                        <b>۱۸K+</b><span>مشتری</span>
+                    </div>
+                    <div>
+                        <b>۴.۹</b><span>امتیاز رضایت</span>
+                    </div>
+                </div>
+            </div>
+            <div class="heroArt"><div class="circle"></div><div class="car">🚘</div><div class="badge">FALCONE<br><small>AUTOCAR</small></div></div>
+        </div>
+    </section>
+
+    <section class="wrap section" id="cats">
+        <div class="head">
+            <div>
+                <small>دسته‌بندی</small><h2>دسته بندی محصولات</h2>
+            </div>
+            <a href="#shop">مشاهده همه ←</a>
+        </div>
+        <div class="cats">
+            <button onclick="filter('detailing')"><strong>✦</strong><b>دیتیلینگ</b><span>شامپو، واکس، پولیش و...</span></button>
+            <button onclick="filter('accessory')"><strong>◈</strong><b>اکسسوری</b><span>لوازم کاربردی و جذاب</span></button>
+            <button onclick="filter('interior')"><strong>▣</strong><b>داخل خودرو</b><span>نظم‌دهنده و مراقبت داخلی</span></button>
+            <button onclick="filter('tools')"><strong>⚙</strong><b>ابزار</b><span>ابزار حرفه‌ای خودرو</span></button>
+        </div>
+    </section>
+
+    <section class="wrap section" id="cats">
+        <div class="head">
+            <div>
+                <small>دسته‌بندی</small><h2>دسته بندی محصولات</h2>
+            </div>
+            <a href="#shop">مشاهده همه ←</a>
+        </div>
+        <div class="cats">
+            <button onclick="filter('detailing')"><strong>✦</strong><b>دیتیلینگ</b><span>شامپو، واکس، پولیش و...</span></button>
+            <button onclick="filter('accessory')"><strong>◈</strong><b>اکسسوری</b><span>لوازم کاربردی و جذاب</span></button>
+            <button onclick="filter('interior')"><strong>▣</strong><b>داخل خودرو</b><span>نظم‌دهنده و مراقبت داخلی</span></button>
+            <button onclick="filter('tools')"><strong>⚙</strong><b>ابزار</b><span>ابزار حرفه‌ای خودرو</span></button>
+        </div>
+    </section>    
+
+    <section class="wrap section" id="shop">
+        <div class="head">
+            <div>
+                <small>پرفروش‌ها</small><h2>محصولات منتخب فالکون</h2>
+            </div>
+            <div class="filters">
+                <button class="sel" onclick="filter('all',this)">همه</button>
+                <button onclick="filter('detailing',this)">دیتیلینگ</button>
+                <button onclick="filter('accessory',this)">اکسسوری</button>
+            </div>
+        </div>
+        <div class="products" id="products"></div>
+    </section>
+
+    <section class="wrap promo">
+        <div>
+            <small>FALCONE SPECIAL</small><h2>ست مراقبت حرفه‌ای<br>برای خودروی تو</h2><p>محصولات منتخب را با تخفیف ویژه تهیه کن.</p>
+            <button class="btn white" onclick="bundle()">افزودن ست به سبد</button>
+        </div>
+        <div class="promoIcon">🧴 ✦ 🚘</div>
+    </section>
+
+    <section class="wrap trust" id="about">
+        <div>
+            <b>✓</b><span>ضمانت اصالت<small>محصولات معتبر و باکیفیت</small></span>
+        </div>
+        <div>
+            <b>↗</b><span>ارسال سریع<small>تحویل مطمئن به سراسر کشور</small></span>
+        </div>
+        <div>
+            <b>↻</b><span>۷ روز ضمانت<small>خرید با خیال راحت</small></span>
+        </div>
+        <div>
+            <b>◉</b><span>پشتیبانی<small>پاسخ‌گوی سوالات شما هستیم</small></span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap foot">
+            <div>
+                <a class="brand">
+                <span>F</span> FALCONE</a><p>فروشگاه تخصصی محصولات و اکسسوری خودرو.</p>
+            </div>
+            <div>
+                <h4>فروشگاه</h4><a href="#shop">محصولات</a><a href="#cats">دسته‌بندی‌ها</a>
+            </div>
+            <div>
+                <h4>راهنما</h4><a>تماس با ما</a><a>سوالات متداول</a>
+            </div>
+            <div>
+                <h4>خبرهای فالکون</h4>
+                <div class="email">
+                    <input placeholder="ایمیل شما"><button>←</button>
+                </div>
+            </div>
+        </div>
+        <div class="copy">© ۱۴۰۵ Falcone — تمامی حقوق محفوظ است.</div>
+    </footer>
+
+    <aside id="drawer">
+        <div class="drawerHead">
+            <h3>سبد خرید</h3><button onclick="cartOpen()">×</button>
+        </div>
+        <div id="items" class="items">
+            <p>سبد خرید خالی است.</p>
+        </div><div class="total">
+            <span>مجموع</span><b id="total">۰ تومان</b>
+        </div>
+        <button class="btn blue full">ادامه ثبت سفارش</button>
+    </aside>
+    <div id="shade" onclick="cartOpen()"></div>
+    <script src="script.js"></script>
+</body>
+</html>
